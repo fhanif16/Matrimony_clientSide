@@ -1,16 +1,17 @@
 import React from 'react';
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import pic from '../../../assets/logo.jpg'
+import { Link } from 'react-router-dom';
 
 const PageNavBar = () => {
 
     const navOptions = <>
 
 <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <Navbar.Link as={Link} to='/' >
           Home
         </Navbar.Link>
-        <Navbar.Link href="#">Biodatas</Navbar.Link>
+        <Navbar.Link as={Link} to='/biodata'>Biodatas</Navbar.Link>
         <Navbar.Link href="#">About Us</Navbar.Link>
         <Navbar.Link href="#">Contact Us</Navbar.Link>
         
