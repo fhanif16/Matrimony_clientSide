@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "image": "https://example.com/images/couple1.jpg",
+      "marriageDate": "2022-06-15",
+      "reviewStar": 5,
+      "successStory": "We met through this platform and it changed our lives. It was an amazing journey from start to finish. We're so thankful to have found each other!"
+    },
+    {
+      "id": 2,
+      "image": "https://example.com/images/male1.jpg",
+      "marriageDate": "2020-12-10",
+      "reviewStar": 4,
+      "successStory": "It took some time, but we finally found our match here. Great platform, and we're happy with our decision to join!"
+    },
+    {
+      "id": 3,
+      "image": "https://example.com/images/female1.jpg",
+      "marriageDate": "2021-04-23",
+      "reviewStar": 5,
+      "successStory": "The process was smooth, and the platform was very helpful in finding the right match for me. We are very happy together!"
+    },
+    {
+      "id": 4,
+      "image": "https://example.com/images/couple2.jpg",
+      "marriageDate": "2019-09-01",
+      "reviewStar": 4,
+      "successStory": "We met on this platform, and it was truly a life-changing experience. We're so grateful for this wonderful journey!"
+    },
+    {
+      "id": 5,
+      "image": "https://example.com/images/male2.jpg",
+      "marriageDate": "2021-07-30",
+      "reviewStar": 5,
+      "successStory": "We connected and clicked right away. Everything about this platform was great and easy to use. We found our perfect match!"
+    },
+    {
+      "id": 6,
+      "image": "https://example.com/images/female2.jpg",
+      "marriageDate": "2023-02-18",
+      "reviewStar": 5,
+      "successStory": "This site gave me the chance to meet the love of my life. It has been an amazing experience, and I couldn't be happier!"
+    }
+  ]
+  

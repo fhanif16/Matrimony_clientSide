@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "biodataType": "male",
+      "profileImage": "https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing_158538-5330.jpg?t=st=1737070014~exp=1737073614~hmac=386104fda82a071b9694eda7e9db2097a62be63a3b9302618c479a8fa5da3866&w=740",
+      "permanentDivisionname": "dhaka",
+      "age": 23,
+      "occupation": "student",
+      "member": "premium"
+    },
+    {
+      "id": 2,
+      "biodataType": "female",
+      "profileImage": "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1737070123~exp=1737073723~hmac=17dd88f2e18d4320e53fa9cea9c468d85f474b9eb83911c1cfd5ae49f1a94911&w=1060",
+      "permanentDivisionname": "chattagram",
+      "age": 45,
+      "occupation": "house wife",
+      "member": "premium"
+    },
+    {
+      "id": 3,
+      "biodataType": "male",
+      "profileImage": "https://example.com/images/profile3.jpg",
+      "permanentDivisionname": "rangpur",
+      "age": 30,
+      "occupation": "job",
+      "member": "premium"
+    },
+    {
+      "id": 4,
+      "biodataType": "female",
+      "profileImage": "https://example.com/images/profile4.jpg",
+      "permanentDivisionname": "barisal",
+      "age": 23,
+      "occupation": "student",
+      "member": "premium"
+    },
+    {
+      "id": 5,
+      "biodataType": "male",
+      "profileImage": "https://example.com/images/profile5.jpg",
+      "permanentDivisionname": "khulna",
+      "age": 45,
+      "occupation": "job",
+      "member": "premium"
+    },
+    {
+      "id": 6,
+      "biodataType": "female",
+      "profileImage": "https://example.com/images/profile6.jpg",
+      "permanentDivisionname": "mymensingh",
+      "age": 30,
+      "occupation": "house wife",
+      "member": "premium"
+    },
+    {
+      "id": 7,
+      "biodataType": "male",
+      "profileImage": "https://example.com/images/profile7.jpg",
+      "permanentDivisionname": "sylhet",
+      "age": 23,
+      "occupation": "student",
+      "member": "premium"
+    },
+    {
+      "id": 8,
+      "biodataType": "female",
+      "profileImage": "https://example.com/images/profile8.jpg",
+      "permanentDivisionname": "dhaka",
+      "age": 45,
+      "occupation": "house wife",
+      "member": "regular"
+    }
+  ]
+  
