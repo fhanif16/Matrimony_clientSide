@@ -1,10 +1,12 @@
 import React from 'react';
 import Biodata from '../Biodata/Biodata';
+import AllBioData from '../AllBiodata/AllBioData';
 
 const BiodataPage = () => {
     return (
         <div>
-            <Biodata></Biodata>
+           
+            <AllBioData></AllBioData>
             
         </div>
     );

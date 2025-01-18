@@ -7,7 +7,7 @@ const PremiumMember = () => {
 
 
     useEffect( () => {
-        fetch('biodata.json')
+        fetch('http://localhost:5000/biodata')
         .then(res => res.json())
         .then(data => {
             const premiumMembers = data.filter(m => m.member ==='premium')
