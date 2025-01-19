@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import DashBoard from "../Components/DashBoard/DashBoard";
+import BiodataDetails from "../pages/Biodata/BiodataDetails/BiodataDetails";
 
 
   export const router = createBrowserRouter([
@@ -38,7 +39,41 @@ import DashBoard from "../Components/DashBoard/DashBoard";
         {
           path:'dashboard',
           element:<PrivateRoute> <DashBoard></DashBoard> </PrivateRoute>
-        }
+        },
+
+        {
+          path: '/biodata/:id',
+          element: <PrivateRoute><BiodataDetails></BiodataDetails></PrivateRoute>,
+          loader: async ({ params }) => {
+              const response = await fetch('http://localhost:5000/biodata');
+              const data = await response.json();
+              const currentBiodata = data.find(item => item.id === parseInt(params.id));
+              const similarBiodata = data.filter(item => 
+                  item.id !== parseInt(params.id) && 
+                  item.biodataType === currentBiodata.biodataType // Match criteria
+              ).slice(0, 3); // Limit to 3 similar biodata
+              return { currentBiodata, similarBiodata };
+          }, }
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       ]
     },
 

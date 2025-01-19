@@ -41,10 +41,9 @@ const Register = () => {
         <div className="flex flex-col lg:flex-row-reverse items-center bg-white rounded-lg shadow-lg max-w-4xl w-full">
           <div className="p-8 lg:w-1/2">
             <h1 className="text-4xl font-bold text-gray-800">Sign up now!</h1>
-            <p className="mt-4 text-gray-600">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
+            <div>
+                <img src={login} alt="" srcset="" />
+            </div>
           </div>
           <div className="p-8 lg:w-1/2 w-full">
             <form

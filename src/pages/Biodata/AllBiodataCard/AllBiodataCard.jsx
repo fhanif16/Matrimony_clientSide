@@ -1,5 +1,6 @@
 import { Button, Card } from 'flowbite-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllBiodataCard = ({data}) => {
     const {id, biodataType, profileImage,permanentDivisionname,age,occupation, member, race,fatherName, motherName,dateOfBirth,height,weight,expectedPartnerAge, expectedPartnerHeight,expectedPartnerWeight,contactEmail,mobileNumber} = data;
@@ -21,6 +22,9 @@ const AllBiodataCard = ({data}) => {
             Gender: {biodataType} 
            </h5>
            <p className="font-normal text-gray-700 dark:text-gray-400">
+             <strong>ID:</strong> {id}
+           </p>
+           <p className="font-normal text-gray-700 dark:text-gray-400">
              <strong>Age:</strong> {age}
            </p>
            <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -29,10 +33,11 @@ const AllBiodataCard = ({data}) => {
            <p className="font-normal text-gray-700 dark:text-gray-400">
              <strong>Division:</strong> {permanentDivisionname}
            </p>
-           <p className="font-normal text-gray-700 dark:text-gray-400">
-             <strong>Membership:</strong> {member.charAt(0).toUpperCase() + member.slice(1)}
-           </p>
-           <Button gradientMonochrome="info">View details</Button>
+          
+          <Link to= {`/biodata/${id}`}>
+
+          <Button gradientMonochrome="info">View details </Button>
+          </Link>
          </div>
        </Card>
      );
