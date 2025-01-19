@@ -8,6 +8,8 @@ import Biodata from "../pages/Biodata/Biodata/Biodata";
 import BiodataPage from "../pages/Biodata/BiodataPage/BiodataPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import DashBoard from "../Components/DashBoard/DashBoard";
 
 
   export const router = createBrowserRouter([
@@ -32,6 +34,10 @@ import Register from "../pages/Register/Register";
         {
           path:'register',
           element:<Register></Register>
+        },
+        {
+          path:'dashboard',
+          element:<PrivateRoute> <DashBoard></DashBoard> </PrivateRoute>
         }
       ]
     },
