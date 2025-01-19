@@ -6,6 +6,8 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Biodata from "../pages/Biodata/Biodata/Biodata";
 import BiodataPage from "../pages/Biodata/BiodataPage/BiodataPage";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
   export const router = createBrowserRouter([
@@ -22,6 +24,14 @@ import BiodataPage from "../pages/Biodata/BiodataPage/BiodataPage";
         {
           path:'/biodata',
           element:<BiodataPage></BiodataPage>
+        },
+        {
+          path:'login',
+          element:<Login></Login>
+        },
+        {
+          path:'register',
+          element:<Register></Register>
         }
       ]
     },

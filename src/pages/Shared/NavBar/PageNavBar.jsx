@@ -14,6 +14,8 @@ const PageNavBar = () => {
         <Navbar.Link as={Link} to='/biodata'>Biodatas</Navbar.Link>
         <Navbar.Link href="#">About Us</Navbar.Link>
         <Navbar.Link href="#">Contact Us</Navbar.Link>
+        <Navbar.Link as={Link} to='/login'>Login</Navbar.Link>
+        
         
       </Navbar.Collapse>
     </>
