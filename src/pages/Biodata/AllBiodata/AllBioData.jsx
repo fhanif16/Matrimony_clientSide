@@ -40,29 +40,53 @@ const AllBioData = () => {
     }));
   };
 
+  // const handleFilter = () => {
+  //   const filtered = biodata.filter((item) => {
+  //     const genderMatch = filters.gender
+  //       ? item.biodataType.toLowerCase() === filters.gender.toLowerCase()
+  //       : true;
+
+  //     const ageMatch = filters.age
+  //       ? ageRanges.some((range) => {
+  //           const [minAge, maxAge] = range.split("-").map(Number);
+  //           return item.age >= minAge && item.age <= maxAge;
+  //         })
+  //       : true;
+
+  //     const divisionMatch = filters.division
+  //       ? item.permanentDivisionname.toLowerCase() === filters.division.toLowerCase()
+  //       : true;
+
+  //     return genderMatch && ageMatch && divisionMatch;
+  //   });
+
+  //   setFilteredData(filtered);
+  // };
   const handleFilter = () => {
     const filtered = biodata.filter((item) => {
+    
       const genderMatch = filters.gender
-        ? item.biodataType.toLowerCase() === filters.gender.toLowerCase()
+        ? item.biodataType && item.biodataType.toLowerCase() === filters.gender.toLowerCase()
         : true;
-
+  
+     
       const ageMatch = filters.age
         ? ageRanges.some((range) => {
             const [minAge, maxAge] = range.split("-").map(Number);
             return item.age >= minAge && item.age <= maxAge;
           })
         : true;
-
+  
+      
       const divisionMatch = filters.division
-        ? item.permanentDivisionname.toLowerCase() === filters.division.toLowerCase()
+        ? item.permanentDivisionname && item.permanentDivisionname.toLowerCase() === filters.division.toLowerCase()
         : true;
-
+  
       return genderMatch && ageMatch && divisionMatch;
     });
-
+  
     setFilteredData(filtered);
   };
-
   const handleReset = () => {
   
     setFilters({
