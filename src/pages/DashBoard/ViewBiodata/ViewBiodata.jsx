@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { Button } from 'flowbite-react';
 
 const ViewBiodata = () => {
   const { user, loading } = useContext(AuthContext); // Getting the logged-in user
@@ -63,9 +64,9 @@ presentDivisionname}</p>
             </div>
             <div className="flex items-center justify-center mt-4">
               <Link to={`editBiodata/${bio._id}`}>
-                <button className="rounded-lg bg-blue-500 px-5 py-2.5 m-2 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <Button  gradientMonochrome="info" className="rounded-lg bg-blue-500 px-5 py-2.5 m-2 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                   Edit
-                </button>
+                </Button>
               </Link>
             </div>
           </div>

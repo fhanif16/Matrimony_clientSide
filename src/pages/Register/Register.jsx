@@ -13,14 +13,27 @@ const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
+    const saveUserToDB = async (email) => {
+      console.log('Saving user to DB:', email); 
+      const response = await fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, role: 'user' }),
+      });
+      const data = await response.json();
+      console.log('Response from server:', data); 
+      };
+
     const onSubmit = data => {
         console.log(data);
         createUser(data.email, data.password)
             .then(result => {
+               saveUserToDB(result.user.email)
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
+                    
                         console.log('user profile info updated')
                         reset();
                         Swal.fire({

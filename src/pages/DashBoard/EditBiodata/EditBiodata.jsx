@@ -468,7 +468,7 @@ const EditBiodata = () => {
  />
  </div>
 
- <Button type="submit">Update</Button>
+ <Button  gradientMonochrome="info" type="submit">Update</Button>
  
 
 

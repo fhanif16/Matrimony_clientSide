@@ -15,6 +15,7 @@ import ViewBiodata from "../pages/DashBoard/ViewBiodata/ViewBiodata";
 import FavouriteBiodata from "../pages/DashBoard/FavouriteBiodata/FavouriteBiodata";
 import AboutUs from "../pages/Aboutus/AboutUs";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import WriteReviews from "../pages/WriteReviews/WriteReviews";
 
 
 
@@ -86,7 +87,12 @@ export const router = createBrowserRouter([
 
       {
         path: "createbiodata",
-        element:<CreateBiodata></CreateBiodata>
+        element:<PrivateRoute><CreateBiodata></CreateBiodata></PrivateRoute>
+      },
+
+      {
+        path: "writereviews",
+        element:<PrivateRoute><WriteReviews></WriteReviews> </PrivateRoute>
       },
     
 

@@ -7,7 +7,7 @@ import pic from '../../../assets/logo.jpg'
 const PageFooter = () => {
     return (
         <Footer container>
-      <div className="w-full">
+      <div className="w-full mt-4">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <Footer.Brand
@@ -32,15 +32,15 @@ const PageFooter = () => {
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Flowbite</Footer.Link>
-                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+                <Footer.Link href="#">Better Half</Footer.Link>
+                <Footer.Link href="#">About Us</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Github</Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
+                <Footer.Link href="#">Connect</Footer.Link>
+                <Footer.Link href="#">Floow Us</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>

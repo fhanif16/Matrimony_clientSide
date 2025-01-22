@@ -6,16 +6,25 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
 
 import { auth } from '../../firebase/firebase.config';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+// import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const {signIn} = useContext(AuthContext)
-    const googleProvider = new GoogleAuthProvider();
+    const {signIn, signInWithGoogle} = useContext(AuthContext)
+    // const googleProvider = new GoogleAuthProvider();
 
     const from = location.state?.from?.pathname || "/";
-
+    const saveUserToDB = async (email) => {
+      console.log('Saving user to DB:', email); 
+      const response = await fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, role: 'user' }),
+      });
+      const data = await response.json();
+      console.log('Response from server:', data); 
+      };
 
     const handleLogin = event => {
         event.preventDefault();
@@ -25,6 +34,7 @@ const Login = () => {
         console.log(email, password);
         signIn(email, password)
             .then(result => {
+              
                 const user = result.user;
                 console.log(user);
                 Swal.fire({
@@ -42,8 +52,10 @@ const Login = () => {
 
 
     const handleGoogleLogin = () => {
-        signInWithPopup(auth, googleProvider )
+        // signInWithPopup(auth, googleProvider )
+        signInWithGoogle()
             .then((result) => {
+              saveUserToDB(result.user.email)
               //  console.log(result.user);
                 Swal.fire({
                     title: 'Login Successful',

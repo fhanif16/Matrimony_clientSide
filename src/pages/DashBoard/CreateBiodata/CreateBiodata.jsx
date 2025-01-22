@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Button } from "flowbite-react";
 
 const CreateBiodata = () => {
 
@@ -49,7 +50,7 @@ const { user } = useContext(AuthContext);
         const result = await response.json();
         console.log("Biodata submitted successfully:", result);
   
-        // SweetAlert for success
+       
         Swal.fire({
           title: 'Success!',
           text: 'Biodata submitted successfully!',
@@ -82,7 +83,7 @@ const { user } = useContext(AuthContext);
       } else {
         console.error("Failed to submit biodata:", response.statusText);
   
-        // SweetAlert for error
+      
         Swal.fire({
           title: 'Error!',
           text: 'Failed to submit biodata. Please try again.',
@@ -93,7 +94,7 @@ const { user } = useContext(AuthContext);
     } catch (error) {
       console.error("Error while submitting biodata:", error);
   
-      // SweetAlert for error
+   
       Swal.fire({
         title: 'Error!',
         text: 'An error occurred while submitting biodata. Please try again.',
@@ -255,7 +256,7 @@ const { user } = useContext(AuthContext);
         </div>
       ))}
 
-      <button
+      <Button  gradientMonochrome="info"
         type="submit"
         style={{
           width: "100%",
@@ -269,7 +270,7 @@ const { user } = useContext(AuthContext);
         }}
       >
         Save and Publish Now
-      </button>
+      </Button>
     </form>
   );
 };
