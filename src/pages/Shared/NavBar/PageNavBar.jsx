@@ -54,6 +54,10 @@ const PageNavBar = () => {
                                 <span className="block truncate text-sm font-medium">{user.email}</span>
                             </Dropdown.Header>
                             <Dropdown.Item as={Link} to="/dashboard">Dashboard</Dropdown.Item>
+
+
+                            
+
                             <Dropdown.Item as={Link} to="dashboard/writereviews">Write Reviews</Dropdown.Item>
                             <Dropdown.Divider />
 

@@ -16,6 +16,12 @@ import FavouriteBiodata from "../pages/DashBoard/FavouriteBiodata/FavouriteBioda
 import AboutUs from "../pages/Aboutus/AboutUs";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import WriteReviews from "../pages/WriteReviews/WriteReviews";
+import AdminDashboard from "../pages/DashBoard/AdminDashboard/AdminDashboard";
+import SuccessStory from "../pages/DashBoard/SuccessStory/SuccessStory";
+import ManageUser from "../pages/DashBoard/ManageUsers/ManageUser";
+import ApprovedPremium from "../pages/DashBoard/ApprovedPremium/ApprovedPremium";
+import ContactEdRequest from "../pages/DashBoard/ContactRequest/ContactEdRequest";
+import ApporvedContactRequest from "../pages/DashBoard/ApprovedContactRequest/ApporvedContactRequest";
 
 
 
@@ -151,6 +157,34 @@ export const router = createBrowserRouter([
         path: "favbiodata",
         element:<PrivateRoute><FavouriteBiodata></FavouriteBiodata></PrivateRoute>
       },
+
+      {
+        path:'contactRequest',
+        element:<ContactEdRequest></ContactEdRequest>
+
+      },
+
+      {
+        path:'adminDashboard',
+        element:<AdminDashboard></AdminDashboard>
+      },
+      {
+        path:'sucessStories',
+        element:<SuccessStory></SuccessStory>
+      },
+      {
+        path:'manageUsers',
+        element:<ManageUser></ManageUser>
+      },
+      {
+        path:'approvePremium',
+        element:<ApprovedPremium></ApprovedPremium>
+       
+      }
+      ,{
+        path:'approvedContact',
+        element:<ApporvedContactRequest></ApporvedContactRequest>
+      }
     ],
   },
 ]);

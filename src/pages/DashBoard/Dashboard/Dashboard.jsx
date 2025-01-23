@@ -1,5 +1,5 @@
 import { Button, Sidebar } from "flowbite-react";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { HiChartPie, HiInbox, HiViewBoards } from "react-icons/hi";
 import { NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -8,6 +8,34 @@ import Swal from "sweetalert2";
 
 const Dashboard = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [userRole, setUserRole] = useState(null);
+
+  useEffect(() => {
+    if (user?.email) {
+      console.log(`Fetching role for email: ${user.email}`);
+
+      fetch(`http://localhost:5000/users/${user.email}`)
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            console.log("Fetch failed with status:", res.status);
+            return null;
+          }
+        })
+        .then((data) => {
+          if (data) {
+            console.log("Fetched user role:", data);
+            setUserRole(data.role);
+          } else {
+            console.log("No data received");
+          }
+        })
+        .catch((error) => {
+          console.log("Fetch error:", error.message);
+        });
+    }
+  }, [user]);
 
   const handleLogout = () => {
     Swal.fire({
@@ -39,61 +67,135 @@ const Dashboard = () => {
           <Sidebar aria-label="Dashboard Sidebar">
             <Sidebar.Items>
               <Sidebar.ItemGroup>
-                <Sidebar.Item icon={HiChartPie}>
-                  <NavLink
-                    to="createbiodata"
-                    className={({ isActive }) =>
-                      isActive ? "text-blue-500 font-bold" : ""
-                    }
-                  >
-                    Create BioData
-                  </NavLink>
-                </Sidebar.Item>
-                {/* <Sidebar.Item icon={HiChartPie}>
-                  <NavLink to='editbiodata'
-                  // to={`editbiodata/${id}`}
-                    className={({ isActive }) =>
-                      isActive ? "text-blue-500 font-bold" : ""
-                    }
-                  >
-                    Edit BioData
-                  </NavLink>
-                </Sidebar.Item> */}
-                <Sidebar.Item icon={HiChartPie}>
-                  <NavLink
-                    to="viewbiodata"
-                    className={({ isActive }) =>
-                      isActive ? "text-blue-500 font-bold" : ""
-                    }
-                  >
-                    View BioData
-                  </NavLink>
-                </Sidebar.Item>
-                <Sidebar.Item icon={HiViewBoards}>
-                  <NavLink
-                    to="favbiodata"
-                    className={({ isActive }) =>
-                      isActive ? "text-blue-500 font-bold" : ""
-                    }
-                  >
-                    Favourite BioData
-                  </NavLink>
-                </Sidebar.Item>
-                <Sidebar.Item icon={HiInbox}>
-                  <NavLink
-                    to="contactRequest"
-                    className={({ isActive }) =>
-                      isActive ? "text-blue-500 font-bold" : ""
-                    }
-                  >
-                    Contact Request
-                  </NavLink>
-                </Sidebar.Item>
-                <Sidebar.Item icon={HiChartPie}>
-                  <Button
-                    className="w-full text-left"
-                    onClick={handleLogout}
-                  >
+                {userRole === "admin" ? (
+                  <>
+
+
+
+
+
+
+
+
+                    <h2 className="text-lg font-bold mb-4 text-center">Admin Dashboard</h2>
+                   
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="adminDashboard"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Admin Dashboard
+                      </NavLink>
+                    </Sidebar.Item>
+
+
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="sucessStories"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Success Stoires
+                      </NavLink>
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiViewBoards}>
+                      <NavLink
+                        to="manageUsers"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Manage Users
+                      </NavLink>
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiInbox}>
+                      <NavLink
+                        to="approvePremium"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Approved Premium
+                      </NavLink>
+                    </Sidebar.Item>
+
+
+                    <Sidebar.Item icon={HiInbox}>
+                      <NavLink
+                        to="approvedContact"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Approved Contact Request
+                      </NavLink>
+                    </Sidebar.Item>
+
+                  
+                  </>
+                ) : (
+                  <>
+                    <h2 className="text-lg font-bold mb-4 text-center">User Dashboard</h2>
+
+
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="createbiodata"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Create BioData
+                      </NavLink>
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="viewbiodata"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        View BioData
+                      </NavLink>
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiViewBoards}>
+                      <NavLink
+                        to="favbiodata"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Faviourite Biodata
+                      </NavLink>
+                    </Sidebar.Item>
+                    <Sidebar.Item icon={HiInbox}>
+                      <NavLink
+                        to="writereviews"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Write Reviews
+                      </NavLink>
+                    </Sidebar.Item>
+
+                    <Sidebar.Item icon={HiInbox}>
+                      <NavLink
+                        to="contactRequest"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        My Contact Request
+                      </NavLink>
+                    </Sidebar.Item>
+                  </>
+                )}
+                <Sidebar.Item>
+                  <Button className="w-full text-left" onClick={handleLogout}>
                     Logout
                   </Button>
                 </Sidebar.Item>
