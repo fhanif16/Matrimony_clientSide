@@ -22,6 +22,8 @@ import ManageUser from "../pages/DashBoard/ManageUsers/ManageUser";
 import ApprovedPremium from "../pages/DashBoard/ApprovedPremium/ApprovedPremium";
 import ContactEdRequest from "../pages/DashBoard/ContactRequest/ContactEdRequest";
 import ApporvedContactRequest from "../pages/DashBoard/ApprovedContactRequest/ApporvedContactRequest";
+import Payment from "../pages/DashBoard/Payment/Payment";
+import Checkout from "../pages/DashBoard/Checkout/Checkout";
 
 
 
@@ -57,6 +59,14 @@ export const router = createBrowserRouter([
         path: "register",
         element: <Register></Register>,
       },
+
+      {
+        path: '/checkout/:id',
+        element: <PrivateRoute>
+        <Checkout></Checkout>
+        </PrivateRoute>,
+      // loader: ({ params }) => fetch(`http://localhost:5000/biodata/${params.id}`)
+       },
 
 
 
@@ -185,6 +195,7 @@ export const router = createBrowserRouter([
         path:'approvedContact',
         element:<ApporvedContactRequest></ApporvedContactRequest>
       }
+      
     ],
   },
 ]);

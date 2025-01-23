@@ -1,16 +1,14 @@
 import React from 'react';
 
-const Payment = () => {
+const Checkout = () => {
     return (
         <div>
-            <h1>Payment</h1>
-            
+
+            <h1>Hiiii</h1>
             
         </div>
     );
 };
 
-export default Payment;
-
-
+export default Checkout;
 

@@ -117,7 +117,7 @@
 
 import { Button } from 'flowbite-react';
 import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../providers/AuthProvider';
 
@@ -260,7 +260,9 @@ const BiodataDetails = () => {
                         <p><strong>Mobile:</strong> {mobileNumber}</p>
 
                         <div className="mt-4">
-                            <Button>Request Information</Button>
+                           <Link to={`/checkout/${id}`}>
+                           <Button >Request Information</Button>
+                           </Link>
                         </div>
 
                         <div className="mt-2">
