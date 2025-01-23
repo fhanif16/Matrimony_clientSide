@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllBiodataCard = ({data}) => {
-    const {id, biodataType, profileImage,permanentDivisionname,age,occupation, member, race,fatherName, motherName,dateOfBirth,height,weight,expectedPartnerAge, expectedPartnerHeight,expectedPartnerWeight,contactEmail,mobileNumber} = data;
+    const {_id,bioId, biodataType, profileImage,permanentDivisionname,age,occupation, member, race,fatherName, motherName,dateOfBirth,height,weight,expectedPartnerAge, expectedPartnerHeight,expectedPartnerWeight,contactEmail,mobileNumber} = data;
 
     //console.log("hello........." , _id)
    
@@ -22,7 +22,7 @@ const AllBiodataCard = ({data}) => {
             Gender: {biodataType} 
            </h5>
            <p className="font-normal text-gray-700 dark:text-gray-400">
-             <strong>ID:</strong> {id}
+             <strong>ID:</strong> {bioId}
            </p>
            <p className="font-normal text-gray-700 dark:text-gray-400">
              <strong>Age:</strong> {age}
@@ -34,7 +34,7 @@ const AllBiodataCard = ({data}) => {
              <strong>Division:</strong> {permanentDivisionname}
            </p>
           
-           <Link to={`/biodata/${id}`}>
+           <Link to={`/biodata/${bioId}`}>
 
 
           <Button gradientMonochrome="info">View details </Button>

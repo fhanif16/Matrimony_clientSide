@@ -127,8 +127,9 @@ const BiodataDetails = () => {
     const [isFavorite, setIsFavorite] = useState(false);
     const { currentBiodata, similarBiodata } = useLoaderData();
     const {
+        _id,
         name,
-        id,
+        bioId,
         biodataType,
         profileImage,
         permanentDivisionname,
@@ -188,7 +189,7 @@ const BiodataDetails = () => {
         'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-        biodataId: id,
+        biodataId: bioId,
         userEmail: user.email, 
         biodataDetails: biodataDetails, 
         }),
@@ -242,7 +243,7 @@ const BiodataDetails = () => {
                     <h2 className="text-2xl font-bold text-center mt-4">{biodataType}</h2>
                     <div className="mt-4">
                         <p><strong>Name:</strong> {name}</p>
-                        <p><strong>ID:</strong> {id}</p>
+                        <p><strong>ID:</strong> {bioId}</p>
                         <p><strong>Division:</strong> {permanentDivisionname}</p>
                         <p><strong>Age:</strong> {age}</p>
                         <p><strong>Occupation:</strong> {occupation}</p>
@@ -260,7 +261,7 @@ const BiodataDetails = () => {
                         <p><strong>Mobile:</strong> {mobileNumber}</p>
 
                         <div className="mt-4">
-                           <Link to={`/checkout/${id}`}>
+                           <Link to={`/checkout/${_id}`}>
                            <Button >Request Information</Button>
                            </Link>
                         </div>

@@ -61,7 +61,7 @@ const PageNavBar = () => {
                             <Dropdown.Item as={Link} to="dashboard/writereviews">Write Reviews</Dropdown.Item>
                             <Dropdown.Divider />
 
-                            <Dropdown.Item onClick={handleLogout}>Sign out</Dropdown.Item>
+                            <Dropdown.Item onClick={handleLogout}>Log out</Dropdown.Item>
                         </Dropdown>
                     ) : (
                         <Avatar alt="Default avatar" img="https://via.placeholder.com/150" rounded />

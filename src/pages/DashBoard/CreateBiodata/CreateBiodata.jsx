@@ -9,7 +9,7 @@ const CreateBiodata = () => {
 
 const { user } = useContext(AuthContext);
   const [biodata, setBiodata] = useState({
-    id:"",
+  
     biodataType: "",
     name: "",
     profileImage: "",
@@ -60,7 +60,7 @@ const { user } = useContext(AuthContext);
   
         setBiodata({
         
-          id:"",
+          
           biodataType: "",
           profileImage: "",
           permanentDivisionname: "",

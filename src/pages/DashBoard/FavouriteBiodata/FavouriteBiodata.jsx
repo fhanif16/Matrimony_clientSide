@@ -139,7 +139,7 @@ const FavouriteBiodata = () => {
     <Table.Cell>{bio.permanentDivisionname}</Table.Cell>
     <Table.Cell>{bio.occupation}</Table.Cell>
     <Table.Cell>
-    <button onClick={()=> handleDelete(bio.bioDataId)}
+    <button onClick={()=> handleDelete(bio._id)}
    
     className="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-700"
     >

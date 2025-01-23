@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
         <Checkout></Checkout>
         </PrivateRoute>,
-      // loader: ({ params }) => fetch(`http://localhost:5000/biodata/${params.id}`)
+       loader: ({ params }) => fetch(`http://localhost:5000/biodata/${params.id}`)
        },
 
 
@@ -79,13 +79,13 @@ export const router = createBrowserRouter([
         loader: async ({ params }) => {
           const response = await fetch('http://localhost:5000/biodata');
           const data = await response.json();
-          const currentBiodata = data.find(item => item.id === parseInt(params.id));
+          const currentBiodata = data.find(item => item.bioId === parseInt(params.id));
           if (!currentBiodata) throw new Error("Biodata not found");
 
           const similarBiodata = data
             .filter(
               item =>
-                item.id !== parseInt(params.id) &&
+                item.bioId !== parseInt(params.id) &&
                 item.biodataType === currentBiodata.biodataType
             )
             .slice(0, 3);
