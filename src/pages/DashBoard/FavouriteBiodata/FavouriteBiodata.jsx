@@ -20,7 +20,7 @@ const FavouriteBiodata = () => {
     }, [user]);
    
     
-    // const handleDelete = (_id) => {
+   
     // Swal.fire({
     // title: 'Are you sure?',
     // text: "You won't be able to revert this!",
@@ -48,24 +48,7 @@ const FavouriteBiodata = () => {
     //     (bio) => bio._id !== _id)
     // );
     // } else {
-    // Swal.fire({
-    // title: 'Error!',
-    // text: 'Something went wrong, please try again.',
-    // icon: 'error',
-    // });
-    // }
-    // })
-    // .catch((error) => {
-    // Swal.fire({
-    // title: 'Error!',
-    // text: 'There was an issue with the server. Please try again later.',
-    // icon: 'error',
-    // });
-    // });
-    // }
-    // });
-    // };
-   
+  
     const handleDelete = (_id) => {
         Swal.fire({
           title: 'Are you sure?',
