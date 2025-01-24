@@ -137,7 +137,7 @@ const ManageUser = () => {
     fetchData();
   }, []);
 
-  // const handleUpdateRole = async (email, field, value) => {
+ 
   //   try {
   //     const response = await fetch(`https://matrimony-platform-server.vercel.app//users/makeadmin`, {
   //       method: "PATCH",
