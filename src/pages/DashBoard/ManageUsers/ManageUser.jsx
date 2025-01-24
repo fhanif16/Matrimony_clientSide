@@ -138,42 +138,7 @@ const ManageUser = () => {
   }, []);
 
  
-  //   try {
-  //     const response = await fetch(`https://matrimony-platform-server.vercel.app//users/makeadmin`, {
-  //       method: "PATCH",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ email, [field]: value }),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to update user");
-  //     }
-
-  //     const updatedUser = await response.json();
-
-      
-  //     setUsers((prevUsers) =>
-  //       prevUsers.map((user) =>
-  //         user.email === email ? { ...user, ...updatedUser } : user
-  //       )
-  //     );
-
-      
-  //     Swal.fire({
-  //       icon: "success",
-  //       title: "Success!",
-  //       text: `User updated to ${value === "admin" ? "Admin" : "Premium Member"}.`,
-  //       showConfirmButton: false,
-  //       timer: 2000,
-  //     });
-  //   } catch (err) {
-  //     console.error(err.message);
-  //     setError(`Failed to update user to ${field}`);
-  //   }
-  // };
-
+ 
 
 
   const handleUpdateRole = (email) => {
