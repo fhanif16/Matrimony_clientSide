@@ -21,33 +21,6 @@ const FavouriteBiodata = () => {
    
     
    
-    // Swal.fire({
-    // title: 'Are you sure?',
-    // text: "You won't be able to revert this!",
-    // icon: 'warning',
-    // showCancelButton: true,
-    // confirmButtonColor: 'hashtag#3085d6',
-    // cancelButtonColor: 'hashtag#d33',
-    // confirmButtonText: 'Yes, delete it!',
-    // }).then((result) => {
-    // if (result.isConfirmed) {
-    // fetch(`https://matrimony-platform-server.vercel.app/favorites/delete/${_id}`, {
-    // method: 'DELETE',
-    // })
-    // .then((res) => res.json())
-    // .then((data) => {
-    // if (data.deletedCount > 0) {
-    // Swal.fire({
-    // title: 'Deleted!',
-    // text: 'The biodata has been deleted.',
-    // icon: 'success',
-    // });
-    // setFavorite((prevFavorites) =>
-    // prevFavorites.filter(
-        
-    //     (bio) => bio._id !== _id)
-    // );
-    // } else {
   
     const handleDelete = (_id) => {
         Swal.fire({
