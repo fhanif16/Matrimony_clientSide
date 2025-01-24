@@ -20,7 +20,7 @@ const Login = () => {
       const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, role: 'user' }),
+      body: JSON.stringify({ email, role: 'user', member: 'normal' }),
       });
       const data = await response.json();
       console.log('Response from server:', data); 

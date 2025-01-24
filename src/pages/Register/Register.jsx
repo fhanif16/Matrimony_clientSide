@@ -18,7 +18,7 @@ const Register = () => {
       const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, role: 'user' }),
+      body: JSON.stringify({ email, role: 'user', member: 'normal' }),
       });
       const data = await response.json();
       console.log('Response from server:', data); 
@@ -46,9 +46,29 @@ const Register = () => {
                         navigate('/');
 
                     })
-                    .catch(error => console.log(error))
-            })
-    };
+                    .catch(error => {
+                      console.log(error);
+                      Swal.fire({
+                          position: 'top-end',
+                          icon: 'error', // Change 'unsuccess' to 'error'
+                          title: 'Failed to update user profile.',
+                          showConfirmButton: false,
+                          timer: 1500,
+                      });
+                  });
+          })
+          .catch(error => { // Catch block for createUser failure
+              console.log('Error creating user:', error);
+              Swal.fire({
+                  position: 'top-end',
+                  icon: 'error',
+                  title: 'Failed to create user. Please try again.',
+                  text: error.message, // Optional: Display error message
+                  showConfirmButton: false,
+                  timer: 1500,
+              });
+          });
+  };
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="flex flex-col lg:flex-row-reverse items-center bg-white rounded-lg shadow-lg max-w-4xl w-full">

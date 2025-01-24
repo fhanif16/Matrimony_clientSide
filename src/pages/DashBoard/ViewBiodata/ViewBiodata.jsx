@@ -68,6 +68,12 @@ presentDivisionname}</p>
                   Edit
                 </Button>
               </Link>
+
+              <Link to={`editBiodata/${bio._id}`}>
+                <Button  gradientMonochrome="info" className="rounded-lg bg-blue-500 px-5 py-2.5 m-2 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                  Make Premium
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Members = ({data}) => {
-    const {id, biodataType, profileImage,permanentDivisionname,age,occupation, member,name} = data;
+    const {bioId, biodataType, profileImage,permanentDivisionname,age,occupation, member,name} = data;
     console.log(biodataType)
 
     return (
@@ -35,7 +35,7 @@ const Members = ({data}) => {
         <p className="font-normal text-gray-700 dark:text-gray-400">
           <strong>Membership:</strong> {member.charAt(0).toUpperCase() + member.slice(1)}
         </p>
-        <Link to= {`/biodata/${id}`}>
+        <Link to= {`/biodata/${bioId}`}>
 
           <Button gradientMonochrome="info">View details </Button>
           </Link>

@@ -170,30 +170,30 @@ export const router = createBrowserRouter([
 
       {
         path:'contactRequest',
-        element:<ContactEdRequest></ContactEdRequest>
+        element:<PrivateRoute><ContactEdRequest></ContactEdRequest></PrivateRoute>
 
       },
 
       {
         path:'adminDashboard',
-        element:<AdminDashboard></AdminDashboard>
+        element:<PrivateRoute><AdminDashboard></AdminDashboard></PrivateRoute>
       },
       {
         path:'sucessStories',
-        element:<SuccessStory></SuccessStory>
+        element:<PrivateRoute><SuccessStory></SuccessStory></PrivateRoute>
       },
       {
         path:'manageUsers',
-        element:<ManageUser></ManageUser>
+        element:<PrivateRoute><ManageUser></ManageUser></PrivateRoute>
       },
       {
         path:'approvePremium',
-        element:<ApprovedPremium></ApprovedPremium>
+        element:<PrivateRoute><ApprovedPremium></ApprovedPremium></PrivateRoute>
        
       }
       ,{
         path:'approvedContact',
-        element:<ApporvedContactRequest></ApporvedContactRequest>
+        element:<PrivateRoute><ApporvedContactRequest></ApporvedContactRequest></PrivateRoute>
       }
       
     ],

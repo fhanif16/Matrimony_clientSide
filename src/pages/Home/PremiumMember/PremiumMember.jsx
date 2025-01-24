@@ -47,8 +47,8 @@ const PremiumMember = () => {
         fetch('http://localhost:5000/biodata')
             .then((res) => res.json())
             .then((data) => {
-                const premiumMembers = data.filter((m) => m.member === 'Premium');
-                // Initially sort by age in ascending order
+                const premiumMembers = data.filter((m) => m.member === 'premium');
+                
                 const sortedMembers = premiumMembers.sort((a, b) => a.age - b.age);
                 setBiodata(sortedMembers);
             });

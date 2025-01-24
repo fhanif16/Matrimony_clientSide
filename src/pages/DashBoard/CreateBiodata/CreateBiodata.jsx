@@ -28,6 +28,7 @@ const { user } = useContext(AuthContext);
     expectedPartnerWeight: "",
     contactEmail: user?.email || "",
     mobileNumber: "",
+    member:"normal",
   });
 
   const handleChange = (e) => {
