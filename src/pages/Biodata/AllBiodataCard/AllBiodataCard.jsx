@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AllBiodataCard = ({data}) => {
     const {_id,bioId, biodataType, profileImage,permanentDivisionname,age,occupation, member, race,fatherName, motherName,dateOfBirth,height,weight,expectedPartnerAge, expectedPartnerHeight,expectedPartnerWeight,contactEmail,mobileNumber} = data;
 
-    //console.log("hello........." , _id)
+
    
        return (
            <Card className="max-w-sm">
