@@ -5,7 +5,7 @@ const AdminDashboard = () => {
     const [chartData, setChartData] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/biodataStats')
+        fetch('https://matrimony-platform-server.vercel.app/biodataStats')
             .then((res) => res.json())
             .then((data) => {
                 setChartData({

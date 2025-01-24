@@ -9,7 +9,7 @@ const SuccessCounter = () => {
     });
 
     useEffect(() => {
-        fetch('http://localhost:5000/successCounter')
+        fetch('https://matrimony-platform-server.vercel.app/successCounter')
             .then((res) => res.json())
             .then((data) => setSuccessData(data))
             .catch((error) => console.error('Error fetching success counters:', error));

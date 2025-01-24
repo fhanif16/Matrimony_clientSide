@@ -7,7 +7,7 @@ const ContactEdRequest = () => {
 
   useEffect(() => {
    
-    fetch('http://localhost:5000/contact-requests')  
+    fetch('https://matrimony-platform-server.vercel.app/contact-requests')  
       .then((response) => response.json())
       .then((data) => setContactRequests(data))
       .catch((error) => console.error('Error fetching contact requests:', error));
@@ -15,7 +15,7 @@ const ContactEdRequest = () => {
 
   const handleDelete = (id) => {
   
-    fetch(`http://localhost:5000/contact-requests/${id}`, {
+    fetch(`https://matrimony-platform-server.vercel.app/contact-requests/${id}`, {
       method: 'DELETE',
     })
       .then((response) => {

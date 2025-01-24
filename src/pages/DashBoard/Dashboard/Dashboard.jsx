@@ -14,7 +14,7 @@ const Dashboard = () => {
     if (user?.email) {
       console.log(`Fetching role for email: ${user.email}`);
 
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://matrimony-platform-server.vercel.app/users/${user.email}`)
         .then((res) => {
           if (res.ok) {
             return res.json();

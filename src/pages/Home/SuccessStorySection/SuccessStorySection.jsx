@@ -7,7 +7,7 @@ const SuccessStorySection = () => {
     const [reviews, setReviews] = useState([]);
     const [sortedByDate, setSortedByDate] = useState(false); 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://matrimony-platform-server.vercel.app/reviews')
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);

@@ -7,7 +7,7 @@
 //     const [biodata, setBiodata] = useState([]);
 
 //     useEffect(() => {
-//         fetch('http://localhost:5000/biodata')
+//         fetch('https://matrimony-platform-server.vercel.app/biodata')
 //             .then((res) => res.json())
 //             .then((data) => {
 //                 const premiumMembers = data.filter((m) => m.member === 'Premium');
@@ -44,7 +44,7 @@ const PremiumMember = () => {
     const [sortOrder, setSortOrder] = useState('asc'); // State to track sorting order
 
     useEffect(() => {
-        fetch('http://localhost:5000/biodata')
+        fetch('https://matrimony-platform-server.vercel.app/biodata')
             .then((res) => res.json())
             .then((data) => {
                 const premiumMembers = data.filter((m) => m.member === 'premium');

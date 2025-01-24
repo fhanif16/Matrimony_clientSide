@@ -9,7 +9,7 @@ const ViewBiodata = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/biodata/user?email=${user.email}`)
+      fetch(`https://matrimony-platform-server.vercel.app/biodata/user?email=${user.email}`)
         .then((response) => response.json())
         .then((data) => setBiodata(data));
     }

@@ -9,7 +9,7 @@ const SuccessStory = () => {
     const [openModal, setOpenModal] = useState(false);
   
     useEffect(() => {
-      fetch("http://localhost:5000/successStories")
+      fetch("https://matrimony-platform-server.vercel.app/successStories")
         .then((res) => res.json())
         .then((data) => setStories(data))
         .catch((error) =>

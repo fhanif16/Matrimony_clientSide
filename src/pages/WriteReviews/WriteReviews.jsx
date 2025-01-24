@@ -27,7 +27,7 @@ const WriteReviews = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/reviews', {
+      const response = await fetch('https://matrimony-platform-server.vercel.app/reviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

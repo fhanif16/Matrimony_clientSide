@@ -111,7 +111,7 @@ const CheckoutForm = ({ bioId, user }) => {
     const cardElement = elements.getElement(CardElement);
 
     // Call backend to create a payment intent
-    const response = await fetch("http://localhost:5000/create-payment-intent", {
+    const response = await fetch("https://matrimony-platform-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: 500, email: user.email, bioId }), // $5 = 500 cents

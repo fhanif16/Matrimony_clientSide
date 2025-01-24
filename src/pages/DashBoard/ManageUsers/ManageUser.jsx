@@ -10,7 +10,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch("http://localhost:5000/users");
+//         const response = await fetch("https://matrimony-platform-server.vercel.app/users");
 //         if (!response.ok) {
 //           throw new Error("Failed to fetch data");
 //         }
@@ -28,7 +28,7 @@
 
 //   const handleMakeAdmin = async (email) => {
 //     try {
-//       const response = await fetch(`http://localhost:5000/users/make-admin`, {
+//       const response = await fetch(`https://matrimony-platform-server.vercel.app/users/make-admin`, {
 //         method: "PATCH",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const ManageUser = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users");
+        const response = await fetch("https://matrimony-platform-server.vercel.app/users");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -139,7 +139,7 @@ const ManageUser = () => {
 
   // const handleUpdateRole = async (email, field, value) => {
   //   try {
-  //     const response = await fetch(`http://localhost:5000//users/makeadmin`, {
+  //     const response = await fetch(`https://matrimony-platform-server.vercel.app//users/makeadmin`, {
   //       method: "PATCH",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -177,7 +177,7 @@ const ManageUser = () => {
 
 
   const handleUpdateRole = (email) => {
-    fetch(`http://localhost:5000/updateMemberByEmail`, {
+    fetch(`https://matrimony-platform-server.vercel.app/updateMemberByEmail`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, role: 'admin' }),
@@ -215,7 +215,7 @@ const ManageUser = () => {
 
 
   const handleMakePremium = (contactEmail) => {
-    fetch(`http://localhost:5000/biodata/updatemember`, {
+    fetch(`https://matrimony-platform-server.vercel.app/biodata/updatemember`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ contactEmail: contactEmail, member: 'premium' }),

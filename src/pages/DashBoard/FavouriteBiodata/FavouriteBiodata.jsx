@@ -12,7 +12,7 @@ const FavouriteBiodata = () => {
     useEffect(() => {
     if (user?.email) {
     console.log('User email:', user.email); 
-    fetch(`http://localhost:5000/favorites/user?email=${user.email}`)
+    fetch(`https://matrimony-platform-server.vercel.app/favorites/user?email=${user.email}`)
     .then((response) => response.json())
     .then((data) => setFavorite(data))
     .catch((err) => console.error('Error fetching favorite biodata:', err));
@@ -31,7 +31,7 @@ const FavouriteBiodata = () => {
     // confirmButtonText: 'Yes, delete it!',
     // }).then((result) => {
     // if (result.isConfirmed) {
-    // fetch(`http://localhost:5000/favorites/delete/${_id}`, {
+    // fetch(`https://matrimony-platform-server.vercel.app/favorites/delete/${_id}`, {
     // method: 'DELETE',
     // })
     // .then((res) => res.json())
@@ -77,7 +77,7 @@ const FavouriteBiodata = () => {
           confirmButtonText: 'Yes, delete it!',
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:5000/favorites/delete/${_id}`, {
+            fetch(`https://matrimony-platform-server.vercel.app/favorites/delete/${_id}`, {
               method: 'DELETE',
             })
               .then((res) => res.json())

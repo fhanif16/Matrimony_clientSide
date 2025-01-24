@@ -38,7 +38,7 @@ const BiodataDetails = () => {
 
     useEffect(() => {
        
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://matrimony-platform-server.vercel.app/users/${user.email}`)
             .then((response) => response.json())
             .then((data) => {
                 if (data.member) {
@@ -81,7 +81,7 @@ const BiodataDetails = () => {
             mobileNumber,
         };
 
-        fetch('http://localhost:5000/favorites', {
+        fetch('https://matrimony-platform-server.vercel.app/favorites', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

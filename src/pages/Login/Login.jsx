@@ -17,7 +17,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
     const saveUserToDB = async (email) => {
       console.log('Saving user to DB:', email); 
-      const response = await fetch('http://localhost:5000/users', {
+      const response = await fetch('https://matrimony-platform-server.vercel.app/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, role: 'user', member: 'normal' }),

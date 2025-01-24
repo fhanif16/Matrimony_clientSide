@@ -32,7 +32,7 @@
 //   useEffect(() => {
 //     const fetchBiodata = async () => {
 //       try {
-//         const response = await fetch(`http://localhost:5000/biodata/${id}`);
+//         const response = await fetch(`https://matrimony-platform-server.vercel.app/biodata/${id}`);
 //         if (response.ok) {
 //           const data = await response.json();
 //           setBiodata(data);
@@ -65,7 +65,7 @@
 //     e.preventDefault();
   
 //     // try {
-//       const response = await fetch(`http://localhost:5000/biodata/${id}`, {
+//       const response = await fetch(`https://matrimony-platform-server.vercel.app/biodata/${id}`, {
 //         method: "PUT",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -237,7 +237,7 @@ const EditBiodata = () => {
  const [biodata, setBiodata] = useState({});
 
  useEffect(() => {
- fetch(`http://localhost:5000/biodata/${id}`)
+ fetch(`https://matrimony-platform-server.vercel.app/biodata/${id}`)
  .then((response) => response.json())
  .then((data) => setBiodata(data));
  }, [id]);
@@ -266,7 +266,7 @@ const EditBiodata = () => {
  mobileNumber: form.mobileNumber?.value || '',
  };
 
- fetch(`http://localhost:5000/biodata/${id}`, {
+ fetch(`https://matrimony-platform-server.vercel.app/biodata/${id}`, {
  method: 'PUT',
  headers: { 'Content-Type': 'application/json' },
  body: JSON.stringify(updatedBio),

@@ -39,7 +39,7 @@ const { user } = useContext(AuthContext);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/biodata', {
+      const response = await fetch('https://matrimony-platform-server.vercel.app/biodata', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

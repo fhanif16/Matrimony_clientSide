@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
         <Checkout></Checkout>
         </PrivateRoute>,
-       loader: ({ params }) => fetch(`http://localhost:5000/biodata/${params.id}`)
+       loader: ({ params }) => fetch(`https://matrimony-platform-server.vercel.app/biodata/${params.id}`)
        },
 
 
@@ -77,7 +77,7 @@ export const router = createBrowserRouter([
         path: "biodata/:id",
         element: <PrivateRoute><BiodataDetails></BiodataDetails></PrivateRoute>,
         loader: async ({ params }) => {
-          const response = await fetch('http://localhost:5000/biodata');
+          const response = await fetch('https://matrimony-platform-server.vercel.app/biodata');
           const data = await response.json();
           const currentBiodata = data.find(item => item.bioId === parseInt(params.id));
           if (!currentBiodata) throw new Error("Biodata not found");
@@ -118,7 +118,7 @@ export const router = createBrowserRouter([
       //   loader: async ({ params }) => {
       //     try {
       //       const response = await fetch(
-      //         `http://localhost:5000/biodata/${params.id}`
+      //         `https://matrimony-platform-server.vercel.app/biodata/${params.id}`
       //       );
       //       if (!response.ok) {
       //         throw new Error("Failed to fetch biodata for editing");
@@ -139,7 +139,7 @@ export const router = createBrowserRouter([
         loader: async ({ params }) => {
           try {
             const response = await fetch(
-              `http://localhost:5000/biodata/${params.id}`
+              `https://matrimony-platform-server.vercel.app/biodata/${params.id}`
             );
             if (!response.ok) {
               throw new Error("Failed to fetch biodata for editing");
