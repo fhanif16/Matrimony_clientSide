@@ -20,7 +20,7 @@ const Banner = () => {
 
   return (
     <div className="relative">
-      {/* Banner Carousel */}
+   
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>
           <div
@@ -38,7 +38,7 @@ const Banner = () => {
         </Carousel>
       </div>
 
-      {/* Form Overlay */}
+     
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative z-10 text-center text-white max-w-2xl w-full px-4">
           <p className="mb-8 text-2xl sm:text-3xl font-bold">
@@ -46,8 +46,8 @@ const Banner = () => {
             
           </p>
 
-          <div className="bg-black bg-opacity-60 p-6 rounded-md shadow-lg">
-            {/* Form Fields */}
+          <div className="bg-black bg-opacity-80 p-6 rounded-md shadow-lg">
+           
             <p>Choose your partner and be a part of our successful journey</p>
           
 
