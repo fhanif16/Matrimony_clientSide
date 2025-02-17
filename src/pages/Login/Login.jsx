@@ -210,6 +210,14 @@ const Login = () => {
     };
 
 
+    
+    const autoFillUser = () => {
+      setEmail('user@tester.com');
+      setPassword('Biodata1$');
+  };
+
+
+
  
 
     return (
@@ -230,7 +238,7 @@ const Login = () => {
                             Admin Login
                         </button>
                         <button
-                            onClick={() => { setEmail(''); setPassword(''); }}
+                            onClick={autoFillUser}
                             className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-sm"
                         >
                             User Login
