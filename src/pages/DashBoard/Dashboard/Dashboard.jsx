@@ -78,6 +78,17 @@ const Dashboard = () => {
 
 
                     <h2 className="text-lg font-bold mb-4 text-center">Admin Dashboard</h2>
+
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="usertype/admin"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                       Admin Info
+                      </NavLink>
+                    </Sidebar.Item>
                    
                     <Sidebar.Item icon={HiChartPie}>
                       <NavLink
@@ -122,7 +133,7 @@ const Dashboard = () => {
                         Manage Users
                       </NavLink>
                     </Sidebar.Item>
-                    <Sidebar.Item icon={HiInbox}>
+                    {/* <Sidebar.Item icon={HiInbox}>
                       <NavLink
                         to="approvePremium"
                         className={({ isActive }) =>
@@ -131,7 +142,7 @@ const Dashboard = () => {
                       >
                         Approved Premium
                       </NavLink>
-                    </Sidebar.Item>
+                    </Sidebar.Item> */}
 
 {/* 
                     <Sidebar.Item icon={HiInbox}>

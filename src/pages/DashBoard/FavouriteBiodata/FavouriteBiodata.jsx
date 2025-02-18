@@ -81,7 +81,7 @@ const FavouriteBiodata = () => {
     <Table>
     <Table.Head>
     <Table.HeadCell>Name</Table.HeadCell>
-    <Table.HeadCell>Biodata ID</Table.HeadCell>
+    {/* <Table.HeadCell>Biodata ID</Table.HeadCell> */}
     <Table.HeadCell>Permanent Address</Table.HeadCell>
     <Table.HeadCell>Occupation</Table.HeadCell>
     <Table.HeadCell>Actions</Table.HeadCell>
@@ -91,7 +91,7 @@ const FavouriteBiodata = () => {
     {favorite.map((bio, index) => (
     <Table.Row key={index}>
     <Table.Cell>{bio.name}</Table.Cell>
-    <Table.Cell>{bio.bioDataId}</Table.Cell>
+    {/* <Table.Cell>{bio.bioDataId}</Table.Cell> */}
     <Table.Cell>{bio.permanentDivisionname}</Table.Cell>
     <Table.Cell>{bio.occupation}</Table.Cell>
     <Table.Cell>

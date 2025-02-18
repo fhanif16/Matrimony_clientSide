@@ -22,10 +22,10 @@ import ManageUser from "../pages/DashBoard/ManageUsers/ManageUser";
 import ApprovedPremium from "../pages/DashBoard/ApprovedPremium/ApprovedPremium";
 import ContactEdRequest from "../pages/DashBoard/ContactRequest/ContactEdRequest";
 import ApporvedContactRequest from "../pages/DashBoard/ApprovedContactRequest/ApporvedContactRequest";
-import Payment from "../pages/DashBoard/Payment/Payment";
+
 import Checkout from "../pages/DashBoard/Checkout/Checkout";
 import Userinfo from "../pages/DashBoard/UserInfo/Userinfo";
-import AdminInfo from "../pages/DashBoard/AdminInfo/AdminInfo";
+
 
 
 
