@@ -114,26 +114,7 @@ export const router = createBrowserRouter([
       },
     
 
-      // {
-      //   path:'editbiodata/:id',
-      //   element:<PrivateRoute><EditBiodata></EditBiodata></PrivateRoute>,
-      //   loader: async ({ params }) => {
-      //     try {
-      //       const response = await fetch(
-      //         `https://matrimony-platform-server.vercel.app/biodata/${params.id}`
-      //       );
-      //       if (!response.ok) {
-      //         throw new Error("Failed to fetch biodata for editing");
-      //       }
-      //       const biodata = await response.json();
-      //       return biodata;
-      //     } catch (error) {
-      //       console.error("Error loading biodata for editing:", error);
-      //       throw error;
-      //     }
-      //   },
-
-      // }
+      
 
       {
         path: "viewbiodata/editbiodata/:id",
