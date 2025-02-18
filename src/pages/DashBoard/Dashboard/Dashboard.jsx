@@ -89,7 +89,7 @@ const Dashboard = () => {
                         Admin Dashboard
                       </NavLink>
                     </Sidebar.Item>
-
+{/* 
                     <Sidebar.Item icon={HiChartPie}>
                       <NavLink
                         to="admindinfo"
@@ -99,7 +99,7 @@ const Dashboard = () => {
                       >
                         Admin Info
                       </NavLink>
-                    </Sidebar.Item>
+                    </Sidebar.Item> */}
 
 
                     <Sidebar.Item icon={HiChartPie}>
@@ -133,7 +133,7 @@ const Dashboard = () => {
                       </NavLink>
                     </Sidebar.Item>
 
-
+{/* 
                     <Sidebar.Item icon={HiInbox}>
                       <NavLink
                         to="approvedContact"
@@ -143,7 +143,7 @@ const Dashboard = () => {
                       >
                         Approved Contact Request
                       </NavLink>
-                    </Sidebar.Item>
+                    </Sidebar.Item> */}
 
                   
                   </>
