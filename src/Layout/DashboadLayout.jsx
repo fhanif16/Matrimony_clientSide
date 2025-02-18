@@ -30,7 +30,7 @@ const DashboadLayout = () => {
            <Link to ='/editbiodata'>Edit BioData </Link>
           </Sidebar.Item>
           <Sidebar.Item  icon={HiChartPie}>
-           <Link to ='/ ...........'>View Biodata </Link>
+           <Link to ='/viewbiodata'>View Biodata </Link>
           </Sidebar.Item>
           
           <Sidebar.Item href="#" icon={HiViewBoards} label="" labelColor="dark">

@@ -21,7 +21,7 @@ const CheckoutForm = ({ bioId, user }) => {
 
     const cardElement = elements.getElement(CardElement);
 
-    // Call backend to create a payment intent
+   
     const response = await fetch("https://matrimony-platform-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

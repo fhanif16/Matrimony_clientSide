@@ -90,6 +90,17 @@ const Dashboard = () => {
                       </NavLink>
                     </Sidebar.Item>
 
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="admindinfo"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                        Admin Info
+                      </NavLink>
+                    </Sidebar.Item>
+
 
                     <Sidebar.Item icon={HiChartPie}>
                       <NavLink
@@ -139,6 +150,17 @@ const Dashboard = () => {
                 ) : (
                   <>
                     <h2 className="text-lg font-bold mb-4 text-center">User Dashboard</h2>
+
+                    <Sidebar.Item icon={HiChartPie}>
+                      <NavLink
+                        to="usertype/user"
+                        className={({ isActive }) =>
+                          isActive ? "text-blue-500 font-bold" : ""
+                        }
+                      >
+                       User Info
+                      </NavLink>
+                    </Sidebar.Item>
 
 
                     <Sidebar.Item icon={HiChartPie}>

@@ -24,6 +24,8 @@ import ContactEdRequest from "../pages/DashBoard/ContactRequest/ContactEdRequest
 import ApporvedContactRequest from "../pages/DashBoard/ApprovedContactRequest/ApporvedContactRequest";
 import Payment from "../pages/DashBoard/Payment/Payment";
 import Checkout from "../pages/DashBoard/Checkout/Checkout";
+import Userinfo from "../pages/DashBoard/UserInfo/Userinfo";
+import AdminInfo from "../pages/DashBoard/AdminInfo/AdminInfo";
 
 
 
@@ -194,7 +196,17 @@ export const router = createBrowserRouter([
       ,{
         path:'approvedContact',
         element:<PrivateRoute><ApporvedContactRequest></ApporvedContactRequest></PrivateRoute>
-      }
+      },
+
+      {
+        path: "usertype/:type",
+        element:<PrivateRoute><Userinfo></Userinfo> </PrivateRoute>
+      },
+
+
+     
+    
+    
       
     ],
   },
