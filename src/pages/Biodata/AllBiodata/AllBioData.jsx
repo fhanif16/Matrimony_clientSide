@@ -44,8 +44,7 @@ const AllBioData = () => {
 
  
 
-  //   setFilteredData(filtered);
-  // };
+
   const handleFilter = () => {
     const filtered = biodata.filter((item) => {
     
