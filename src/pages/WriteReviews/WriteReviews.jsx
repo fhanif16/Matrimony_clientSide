@@ -44,7 +44,7 @@ const WriteReviews = () => {
           confirmButtonText: 'OK',
         });
 
-        // Reset form after successful submission
+      
         setBiodata({
           id: "",
           name: "",
@@ -53,7 +53,7 @@ const WriteReviews = () => {
           reviewStar: "",
           successStory: "",
           partnerId: "",
-          marriageStatus: "Completed", // Reset to default
+          marriageStatus: "Completed", 
         });
       } else {
         Swal.fire({
