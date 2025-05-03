@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import "./AboutUs.css";
+import { Button } from "flowbite-react";
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -59,12 +60,14 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <button
-        className="show-more-btn"
-        onClick={() => setIsVisible(!isVisible)}
-      >
-        {isVisible ? "Show Less" : "Show More"}
-      </button>
+      <Button gradientMonochrome="info"
+                  type="submit"
+                  
+                  className="w-full font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"  onClick={() => setIsVisible(!isVisible)}
+                > {isVisible ? "Show Less" : "Show More"}</Button>
+
+        
+      
 
       {isVisible && (
         <div className="section fade-in">
