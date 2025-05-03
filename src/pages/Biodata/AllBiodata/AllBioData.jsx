@@ -42,19 +42,7 @@ const AllBioData = () => {
 
 
 
-  //     const ageMatch = filters.age
-  //       ? ageRanges.some((range) => {
-  //           const [minAge, maxAge] = range.split("-").map(Number);
-  //           return item.age >= minAge && item.age <= maxAge;
-  //         })
-  //       : true;
-
-  //     const divisionMatch = filters.division
-  //       ? item.permanentDivisionname.toLowerCase() === filters.division.toLowerCase()
-  //       : true;
-
-  //     return genderMatch && ageMatch && divisionMatch;
-  //   });
+ 
 
   //   setFilteredData(filtered);
   // };
