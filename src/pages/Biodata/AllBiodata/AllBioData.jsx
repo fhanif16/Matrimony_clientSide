@@ -40,11 +40,7 @@ const AllBioData = () => {
     }));
   };
 
-  // const handleFilter = () => {
-  //   const filtered = biodata.filter((item) => {
-  //     const genderMatch = filters.gender
-  //       ? item.biodataType.toLowerCase() === filters.gender.toLowerCase()
-  //       : true;
+
 
   //     const ageMatch = filters.age
   //       ? ageRanges.some((range) => {
