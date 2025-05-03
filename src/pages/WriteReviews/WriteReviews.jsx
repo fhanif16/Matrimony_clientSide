@@ -32,7 +32,7 @@ const WriteReviews = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(biodata), // Include marriageStatus here
+        body: JSON.stringify(biodata), 
       });
 
       if (response.ok) {
